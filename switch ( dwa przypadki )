@@ -1,0 +1,59 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1 - pole kwadraty\n2 - pole koła");
+            Console.WriteLine("\nWybierz wartość:");
+            string x;
+            x = Console.ReadLine();
+
+            switch (x)
+            {
+                case "1":
+                    Console.Clear();
+                    Console.WriteLine("Pole kwadratu");
+                    Console.WriteLine("Podaj długość boku:");
+                    string x1 = Console.ReadLine();
+                    int y1;
+         
+                    
+                    y1 = int.Parse(x1);
+                    
+                    Console.WriteLine("Pole kwadratu wynosi: {0:##.##}",y1 * y1);
+
+
+
+
+                    break;
+                case "2":
+                    Console.Clear();
+                    Console.WriteLine("Pole koła");
+                    Console.WriteLine("Podaj Promień: ");
+                    string x2 = Console.ReadLine();
+                    int y2;
+                    double y3;
+                    y3 = 3.14;
+
+                    y2 = int.Parse(x2);
+                    Console.WriteLine("Pole Koła wynosi: {0:##.##}", y2 * y2 * y3);
+
+                    break;
+                default:
+                    Console.WriteLine("Podałeś błędne dane!");
+                    break;
+
+
+            }
+
+            Console.ReadKey();
+
+            
+                
+            }
+        }
+    }
+
