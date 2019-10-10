@@ -1,0 +1,58 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //int i;
+            ////wyswietl liczby z przedziału od 1 do 10
+            //for (int i = 1; i <= 10; i++)
+            //{
+
+            //    Console.WriteLine(i + " ");
+
+            //}
+            //wyswietl liczby parzyste z przedziału od 5 do 20 w porządku malejącym
+            for (int i = 20; i >= 5; i--)
+
+                
+            {
+                if (i % 2 == 0)
+
+                Console.Write(i + " ");
+                   
+
+            }
+
+            /*
+             * Wyswietl na ekranie:
+             * 
+             * *
+             * **
+             * ***
+             * ****
+             * *****
+             * wysokość choinki uzytkownik podaje z klawiatury
+             */
+
+            Console.WriteLine("Podaj wysokosc choinki: ");
+            string x = Console.ReadLine();
+            if (int.TryParse(x) == true)
+            {
+
+
+
+            }
+                
+            
+            
+           
+
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
