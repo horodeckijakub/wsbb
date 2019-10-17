@@ -30,3 +30,53 @@
 
             //  }
             //napisz pogram który za pomocą instrukcji while dla danych wartości x zmieniających się w przedziale od 1 do 50 obliczy ich sume
+
+            //int x =1 , y = 0;
+            //int suma = 0;
+            //while (x <= 50)
+            //{
+
+            //    x++;
+            //    suma += x;
+
+
+            //}
+            //Console.WriteLine("Suma wynosi: {0}", suma);
+
+
+            //napisz program, który za pomocą pętli for sumuje liczby nieparzyste z przedziału  1 do 10
+
+
+            //int suma = 0;
+            //for (int i = 1; i <= 10; i++)
+
+            //{
+            //    if (i % 2 != 0)
+
+            //        suma += i;
+
+
+
+
+
+            //}
+
+            //Console.WriteLine("suma wynosi: {0}", suma);
+
+
+            /* korzystając z pętli do while wykonać tabliczke mnożenia*/
+
+            int n = 1, m = 1;
+            int iloczyn = 0;
+            do
+            {
+                do
+                {
+                    iloczyn = n * m;
+                    Console.Write("{0}\t", iloczyn);
+                    m++;
+                } while (m <= 10);
+                n++;
+                m = 1;
+                Console.WriteLine();
+            } while (n <= 10);
