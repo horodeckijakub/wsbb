@@ -1,0 +1,32 @@
+
+            /*
+             * *napisz program, który za pomocą instrukcji do...while dla danych wartości zmieniających się w przedziale od 0 do 15 obliczy
+             * wartość fukncji y = 4x
+             */
+
+            /*int y = 0, x = 0;*/
+            //do
+            //{
+            //    y = 4 * x;
+
+            //    Console.WriteLine("x = {0}\ty = {1}",x , y );
+            //    x++;
+
+
+
+            //} while (x <= 15);
+
+            //napisz program znajdujący się powyżej za pomocą pętli while
+
+
+            //Console.WriteLine();
+            //int x = 0, y = 0;
+            //while (x <= 15);
+            //{
+            //    y = x * 4;
+            //    Console.WriteLine("x={0}\ty = {1}", x, y);
+            //    x++;
+
+
+            //  }
+            //napisz pogram który za pomocą instrukcji while dla danych wartości x zmieniających się w przedziale od 1 do 50 obliczy ich sume
