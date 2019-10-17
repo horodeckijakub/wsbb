@@ -80,3 +80,13 @@
                 m = 1;
                 Console.WriteLine();
             } while (n <= 10);
+ /*
+             * napisz program który wyświetli duże litery alfabetu
+             * od A do Z i od Z do A z wykorzystaniem pętli for
+             */
+
+            for (char znak = 'A'; znak <= 'Z'; znak++)
+                Console.Write("{0}, ", znak);
+            Console.WriteLine();
+            for (char znakk = 'Z'; znakk >= 'A'; znakk--)
+                Console.Write("{0}, ", znakk);
