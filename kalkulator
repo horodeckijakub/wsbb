@@ -1,0 +1,47 @@
+int num1 = 0; int num2 = 0;
+
+        
+        Console.WriteLine("Kalkulator");
+            Console.WriteLine("------------------------\n");
+
+            
+            Console.WriteLine("Napisz pierwszą liczbę i wciśnij enter");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            
+            Console.WriteLine("Napisz drugą liczbę i wciśnij enter");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            
+            Console.WriteLine("Wybierz jedną z opcji działania:");
+            Console.WriteLine("\ta - Dodawanie");
+            Console.WriteLine("\ts - Odejmowanie");
+            Console.WriteLine("\tm - Mnożenie");
+            Console.WriteLine("\td - Dzielenie");
+            Console.Write("Twój wybór ? ");
+
+            
+            switch (Console.ReadLine())
+            {
+                case "a":
+                    Console.WriteLine($"Twój wynik to: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "s":
+                    Console.WriteLine($"Twój wynik to: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"Twój wynik to: {num1} * {num2} = " + (num1* num2));
+                    break;
+                case "d":
+                    Console.WriteLine($"Twój wynik to: {num1} / {num2} = " + (num1 / num2));
+                    break;
+            }
+    
+    Console.Write("Naciśnij dowolny przycisk aby wyjść...");
+
+
+
+
+
+
+            Console.ReadKey();
