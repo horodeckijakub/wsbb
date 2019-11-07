@@ -1,0 +1,40 @@
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            uint number;
+            while (true)
+            {
+
+
+                Console.WriteLine("Wprowadz liczbę całkowitą:");
+                string x = Console.ReadLine();
+                try
+                {
+                    number = uint.Parse(x);
+                    break;
+
+                }
+                catch (SystemException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                Console.WriteLine("Podaj jeszcze raz liczbę całkowitą\n\n");
+            }
+            Console.WriteLine("Liczba całkowita wynosi: {0}", number);
+            
+
+
+            Console.ReadKey();
+
+
+
+
+
+        }
+    }
+}
