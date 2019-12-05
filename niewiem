@@ -31,31 +31,58 @@ namespace ConsoleApp1
             };
             string path = @"C:\Users\Student\C#Files";
 
-            if (Directory.Exists(path))
+            try
             {
-                Console.WriteLine("\nKatalog istenieje");
+
+
+
+                if (Directory.Exists(path))
+                {
+                    Console.WriteLine("\nKatalog istenieje");
+
+
+                }
+                else
+                {
+
+                    Directory.CreateDirectory("\\Users\\student\\C#Files");
+
+                    string textFilePath = @"C\Users\Student\C#Files\testFile.txt";
+                    File.WriteAllLines(textFilePath, customers);
+
+                    Console.WriteLine("Katalog został utworzony: {0}", Directory.GetCreationTime(path));
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.ToString());
+
+            }
+            if(Directory.Exists(path))
+            {
+                Console.WriteLine("\nCzy chcesz usunąć katalog z plikami? 1-true, 0-false");
+                string delete = Console.ReadLine();
+
+                if (delete == "1")
+                {
+                    Directory.Delete(path, true);
+
+                }
+                if (Directory.Exists(path))
+                {
+                    Console.WriteLine("Katalog został usunięty");
+
+
+
+                }
+                else
+                {
+                    Console.WriteLine("Nie usunąłeś katalogu");
+                }
 
 
             }
-            else
-            {
-
-                Directory.CreateDirectory("\\Users\\student\\C#Files");
-
-                string textFilePath = @"C\Users\Student\C#Files\testFile.txt";
-                File.WriteAllLines(textFilePath, customers);
-
-                Console.WriteLine("Katalog został utworzony: {0}", Directory.GetCreationTime(path));
-            }
-
-
-
-
-
-
-
-
-
 
 
 
