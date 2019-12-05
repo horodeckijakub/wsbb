@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DirectoryInfo wsbDir = new DirectoryInfo(".");
+
+
+            DirectoryInfo studentDir = new DirectoryInfo(@"C:\Users\Student\Desktop");
+
+
+            Console.WriteLine(studentDir.FullName);
+            Console.WriteLine(studentDir.Name);
+            Console.WriteLine(studentDir.Parent);
+            Console.WriteLine(studentDir.Attributes);
+            Console.WriteLine(studentDir.CreationTime);
+
+            string[] customers =
+            {
+                "Anna Nowak",
+                "Jacek Kik",
+                "Ktos nie wiem kto"
+            };
+            string path = @"C:\Users\Student\C#Files";
+
+            if (Directory.Exists(path))
+            {
+                Console.WriteLine("\nKatalog istenieje");
+
+
+            }
+            else
+            {
+
+                Directory.CreateDirectory("\\Users\\student\\C#Files");
+
+                string textFilePath = @"C\Users\Student\C#Files\testFile.txt";
+                File.WriteAllLines(textFilePath, customers);
+
+                Console.WriteLine("Katalog został utworzony: {0}", Directory.GetCreationTime(path));
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
