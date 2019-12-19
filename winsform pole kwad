@@ -1,0 +1,53 @@
+namespace WindowsFormsApp1
+{
+   
+    public partial class Kwadrat : Form
+    {
+        
+        public Kwadrat()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBok.Text = "";
+            txtObwód.Text = "";
+            txtPole.Text = "";
+        }
+
+        private void txtObwód_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void txtBok_TextChanged(object sender, EventArgs e)
+        {
+            double bok;
+            if (double.TryParse(txtBok.Text, out bok) && bok > 0)
+            {
+                txtObwód.Text = (4 * bok).ToString();
+                txtPole.Text = Math.Pow(bok, 2).ToString();
+                lblKom.Text = string.Empty;
+            }
+            else
+            {
+                lblKom.Text = "Wpisz liczbę dodatnią";
+                txtPole.Text = string.Empty;
+                txtObwód.Text = string.Empty;
+            }
+        }
+    }
+}
