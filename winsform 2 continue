@@ -1,0 +1,42 @@
+namespace WindowsFormsApp1
+{
+    public partial class color1 : Form
+    {
+        public color1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnColorClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnColorCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            int bok;
+            if (int.TryParse(txtBok.Text, out bok) && bok > 0 && bok <=200)
+            {
+                panel1.Height = bok;
+                panel1.Width = bok;
+                label1.Visible = false;
+            }
+            else
+            {
+                label1.Visible = true;
+            }
+        }
+
+        private void btnKolor_Click(object sender, EventArgs e)
+        {
+            
+            colorDialog1.ShowDialog();
+            panel1.BackColor = colorDialog1.Color;
+        }
+    }
+}
